@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('33.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('fondo.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ header h1, header h2, footer p {
   max-width: 400px;
   margin-right: 40px;
 }
-
+/*Para la imagen de flyers*/
 .image-container {
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ header h1, header h2, footer p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.931);
   width: 100%;
   max-width: 500px; /* Ajusta el tamaño del contenedor */
-  height: 700px; /* Ajusta la altura del contenedor */
+  height: 855px; /* Ajusta la altura del contenedor */
 }
 
 .image-container img {
@@ -139,4 +139,29 @@ button:hover {
 
 footer p {
   text-align: center;
+}
+
+/* Para el boton de atras */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #28834c;
+  color: #030202;
+  padding: 20px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.back-button i {
+  margin-right: 6px;
+}
+
+.back-button:hover {
+  background-color: #baba13d8;
+  color: white;
 }

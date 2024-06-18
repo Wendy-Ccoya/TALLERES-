@@ -19,25 +19,41 @@
     <img src="UNAP.png" alt="Logo Universidad" class="logo-right">
   </header>
   
+  <a href="/index.html" class="back-button"><i class="fas fa-arrow-left"></i> ATRÁS</a>
+
   <div class="main-content">
     <div class="container">
       <h2>FORMULARIO DE INSCRIPCIÓN</h2>
       <form id="registrationForm">
         <div class="form-group">
           <label for="dni"><i class="fas fa-id-card"></i> DNI:</label>
-          <input type="text" id="dni" name="dni" required>
+          <input type="text" id="dni" name="dni" required pattern="\d{8}" inputmode="numeric" maxlength="8" title="Por favor ingrese 8 números.">
+          <span class="error-message" id="dni-error"></span>
         </div>
         <div class="form-group">
           <label for="apellidoPaterno"><i class="fas fa-user"></i> Apellido Paterno:</label>
           <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+          <span class="error-message" id="Apellido Paterno-error"></span>
         </div>
         <div class="form-group">
           <label for="apellidoMaterno"><i class="fas fa-user"></i> Apellido Materno:</label>
           <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
+          <span class="error-message" id="Apellido Materno-error"></span>
         </div>
         <div class="form-group">
           <label for="nombres"><i class="fas fa-user"></i> Nombres:</label>
           <input type="text" id="nombres" name="nombres" required>
+          <span class="error-message" id="Nombres-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="celular"><i class="fas fa-mobile-alt"></i> Número de celular:</label>
+          <input type="text" id="celular" name="celular" required pattern="\d{9}" inputmode="numeric" maxlength="9" title="Por favor ingrese 9 números.">
+          <span class="error-message" id="celular-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="correoInstitucional"><i class="fas fa-envelope"></i> Correo Institucional:</label>
+          <input type="email" id="correoInstitucional" name="correoInstitucional" required>
+          <span class="error-message" id="correoInstitucional-error"></span>
         </div>
         <div class="form-group">
           <label for="programaEstudios"><i class="fas fa-book"></i> Programa de Estudios:</label>
@@ -57,7 +73,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="docente"><i class="fas fa-school"></i> Usted es Docente:</label>
+          <label for="docente"><i class="fas fa-user"></i> Usted es Docente:</label>
           <div class="checkbox-group">
             <label><input type="checkbox" name="intereses" value="interes1"> Contratado</label><br>
             <label><input type="checkbox" name="intereses" value="interes2"> Nombrado</label>
